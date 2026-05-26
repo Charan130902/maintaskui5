@@ -1,0 +1,461 @@
+<mvc:View
+    controllerName="com.maintask.controller.detailedView1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form">
+
+    <Page title="Main Task">
+
+        <content>
+
+            <IconTabBar
+                id="idMainTabBar"
+                expandable="false">
+
+                <items>
+
+                    <!-- CONTRACT -->
+
+                    <IconTabFilter
+                        key="CONTRACT"
+                        text="Contract"
+                        icon="sap-icon://document">
+
+                        <VBox class="sapUiSmallMargin">
+
+                            <form:SimpleForm
+                                editable="true"
+                                layout="ColumnLayout">
+
+                                <form:content>
+
+                                    <!-- Row 1 -->
+                                    <Label text="Valid From" required="true"/>
+                                    <DatePicker placeholder="MM/DD/YYYY" width="100%"/>
+
+                                    <Label text="Valid To" required="true"/>
+                                    <DatePicker placeholder="MM/DD/YYYY" width="100%"/>
+
+                                    <!-- Row 2 -->
+                                    <Label text="Sold To Name" required="true"/>
+                                    <Input width="100%"/>
+
+                                    <Label text="Sold To Number"/>
+                                    <Input width="100%"/>
+
+                                    <!-- Row 3 -->
+                                    <Label text="Sold To Address"/>
+                                    <Input width="100%"/>
+
+                                    <Label text="Sold To City"/>
+                                    <Input width="100%"/>
+
+                                    <!-- Row 4 -->
+                                    <Label text="Sold To State"/>
+                                    <Select width="100%">
+                                        <items>
+                                            <core:Item xmlns:core="sap.ui.core" text=""/>
+                                        </items>
+                                    </Select>
+
+                                    <Label text="Sold To Zip Code"/>
+                                    <Input width="100%"/>
+
+                                    <!-- Row 5 -->
+                                    <Label text="Payer Number"/>
+                                    <Input width="100%"/>
+
+                                    <Label text="Bill To Number"/>
+                                    <Input width="100%"/>
+
+                                    <!-- Row 6 -->
+                                    <Label text="Ship To / Job Name" required="true"/>
+                                    <Input width="100%"/>
+
+                                    <Label text="Plan Name"/>
+                                    <Select width="100%">
+                                        <items>
+                                            <core:Item xmlns:core="sap.ui.core" text=""/>
+                                        </items>
+                                    </Select>
+
+                                    <!-- Row 7 -->
+                                    <Label text="PO Number" required="true"/>
+                                    <Input width="100%"/>
+
+                                    <Label text="Job Number"/>
+                                    <Input width="100%"/>
+
+                                    <!-- Row 8 -->
+                                    <Label text="Ship To Address"/>
+                                    <Input width="100%"/>
+
+                                    <Label text="Ship To City" required="true"/>
+                                    <Input width="100%"/>
+
+                                    <!-- Row 9 -->
+                                    <Label text="Ship To State" required="true"/>
+                                    <Select width="100%">
+                                        <items>
+                                            <core:Item xmlns:core="sap.ui.core" text=""/>
+                                        </items>
+                                    </Select>
+
+                                    <Label text="Ship To Zip Code" required="true"/>
+                                    <Input width="100%"/>
+
+                                    <!-- Row 10 -->
+                                    <Label text="County / District" required="true"/>
+                                    <Input width="100%"/>
+
+                                    <Label text="Country" required="true"/>
+                                    <Select width="100%">
+                                        <items>
+                                            <core:Item xmlns:core="sap.ui.core" text=""/>
+                                        </items>
+                                    </Select>
+
+                                    <!-- Row 11 -->
+                                    <Label text="Means of Transportation Type" required="true"/>
+                                    <Select width="100%">
+                                        <items>
+                                            <core:Item xmlns:core="sap.ui.core" text=""/>
+                                        </items>
+                                    </Select>
+
+                                    <Label text="Taxable"/>
+                                    <Switch state="false"/>
+
+                                    <!-- Row 12 -->
+                                    <Label text="Sales Office" required="true"/>
+                                    <Select width="100%">
+                                        <items>
+                                            <core:Item xmlns:core="sap.ui.core" text=""/>
+                                        </items>
+                                    </Select>
+
+                                    <Label text="Sales Group" required="true"/>
+                                    <Select width="100%">
+                                        <items>
+                                            <core:Item xmlns:core="sap.ui.core" text=""/>
+                                        </items>
+                                    </Select>
+
+                                    <!-- Row 13 -->
+                                    <Label text="Sales Organization" required="true"/>
+                                    <Select width="100%">
+                                        <items>
+                                            <core:Item xmlns:core="sap.ui.core" text=""/>
+                                        </items>
+                                    </Select>
+
+                                    <Label text="Distribution Channel" required="true"/>
+                                    <Select width="100%">
+                                        <items>
+                                            <core:Item xmlns:core="sap.ui.core" text=""/>
+                                        </items>
+                                    </Select>
+
+                                    <!-- Row 14 -->
+                                    <Label text="Incoterms" required="true"/>
+                                    <Select width="100%">
+                                        <items>
+                                            <core:Item xmlns:core="sap.ui.core" text=""/>
+                                        </items>
+                                    </Select>
+
+                                    <Label text="Split Criteria" required="true"/>
+                                    <Select width="100%">
+                                        <items>
+                                            <core:Item xmlns:core="sap.ui.core" text=""/>
+                                        </items>
+                                    </Select>
+
+                                    <!-- Row 15 -->
+                                    <Label text="Currency"/>
+                                    <Select width="100%">
+                                        <items>
+                                            <core:Item xmlns:core="sap.ui.core" text=""/>
+                                        </items>
+                                    </Select>
+
+                                    <Label text="Texas Lien Info"/>
+                                    <Input width="100%"/>
+
+                                    <!-- Row 16 -->
+                                    <Label text="Invoice Text"/>
+                                    <Input width="100%"/>
+
+                                    <Label text="POD Relevant"/>
+                                    <Switch state="false"/>
+
+                                </form:content>
+
+                            </form:SimpleForm>
+
+                            <!-- Bottom Action Buttons -->
+                            <Toolbar>
+
+                                <Button
+                                    text="Save"
+                                    type="Reject"
+                                    icon="sap-icon://sys-cancel"
+                                    press="onContractSave"/>
+
+                                <ToolbarSpacer/>
+
+                                <Button
+                                    text="Save As Template"
+                                    type="Reject"
+                                    icon="sap-icon://sys-cancel"
+                                    press="onSaveAsTemplate"/>
+
+                                <ToolbarSpacer/>
+
+                                <Button
+                                    text="Preview"
+                                    type="Reject"
+                                    icon="sap-icon://sys-cancel"
+                                    press="onPreview"/>
+
+                                <Button
+                                    text="Submit To Admin"
+                                    press="onSubmitToAdmin"/>
+
+                                <Button
+                                    text="Submit To Specialist"
+                                    type="Reject"
+                                    icon="sap-icon://sys-cancel"
+                                    press="onSubmitToSpecialist"/>
+
+                            </Toolbar>
+
+                        </VBox>
+
+                    </IconTabFilter>
+
+                    <!-- EMPLOYEE -->
+
+                    <IconTabFilter
+                        key="EMP"
+                        text="Employee Details"
+                        icon="sap-icon://employee">
+
+                        <VBox class="sapUiSmallMargin">
+
+                            <Toolbar>
+
+                                <Title text="Employee Dashboard"/>
+
+                                <ToolbarSpacer/>
+
+                                <Button
+                                    text="Add"
+                                    type="Emphasized"
+                                    press="onAdd"
+                                    enabled="{= !${empModel>/isAdding} }"/>
+
+                                <Button
+                                    text="Edit"
+                                    type="Attention"
+                                    press="onEdit"
+                                    enabled="{= !${empModel>/isAdding} }"/>
+
+                                <Button
+                                    text="Delete"
+                                    type="Reject"
+                                    press="onDelete"
+                                    enabled="{= !${empModel>/isAdding} }"/>
+
+                                <Button
+                                    text="Refresh"
+                                    press="onRefresh"/>
+
+                            </Toolbar>
+
+                            <Table
+                                id="idEmpTable"
+                                items="{empModel>/employees}"
+                                mode="SingleSelectLeft"
+                                growing="true">
+
+                                <columns>
+
+                                    <Column>
+                                        <Text text="EMP ID"/>
+                                    </Column>
+
+                                    <Column>
+                                        <Text text="NAME"/>
+                                    </Column>
+
+                                    <Column>
+                                        <Text text="LOCATION"/>
+                                    </Column>
+
+                                    <Column>
+                                        <Text text="DESIGNATION"/>
+                                    </Column>
+
+                                </columns>
+
+                                <items>
+
+                                    <ColumnListItem>
+
+                                        <cells>
+
+                                            <HBox>
+                                                <Text
+                                                    text="{empModel>EMPID}"
+                                                    visible="{= !${empModel>Editable} }"/>
+                                                <Input
+                                                    value="{empModel>EMPID}"
+                                                    visible="{empModel>Editable}"/>
+                                            </HBox>
+
+                                            <HBox>
+                                                <Text
+                                                    text="{empModel>NAME}"
+                                                    visible="{= !${empModel>Editable} }"/>
+                                                <Input
+                                                    value="{empModel>NAME}"
+                                                    visible="{empModel>Editable}"/>
+                                            </HBox>
+
+                                            <HBox>
+                                                <Text
+                                                    text="{empModel>LOCATION}"
+                                                    visible="{= !${empModel>Editable} }"/>
+                                                <Input
+                                                    value="{empModel>LOCATION}"
+                                                    visible="{empModel>Editable}"/>
+                                            </HBox>
+
+                                            <HBox>
+                                                <Text
+                                                    text="{empModel>DESIGNATION}"
+                                                    visible="{= !${empModel>Editable} }"/>
+                                                <Input
+                                                    value="{empModel>DESIGNATION}"
+                                                    visible="{empModel>Editable}"/>
+                                            </HBox>
+
+                                        </cells>
+
+                                    </ColumnListItem>
+
+                                </items>
+
+                            </Table>
+
+                            <Toolbar visible="{empModel>/isAdding}">
+
+                                <ToolbarSpacer/>
+
+                                <Button
+                                    text="Clear"
+                                    type="Reject"
+                                    press="onClear"/>
+
+                                <Button
+                                    text="Save"
+                                    type="Accept"
+                                    press="onSave"/>
+
+                            </Toolbar>
+
+                        </VBox>
+
+                    </IconTabFilter>
+
+                    <!-- PRODUCTS -->
+
+                    <IconTabFilter
+                        key="PRODUCTS"
+                        text="Products"
+                        icon="sap-icon://product">
+
+                        <Table
+                            growing="true"
+                            items="{
+                                path:'/Products',
+                                parameters:{
+                                    expand:'Supplier'
+                                }
+                            }">
+
+                            <columns>
+
+                                <Column>
+                                    <Text text="Product ID"/>
+                                </Column>
+
+                                <Column>
+                                    <Text text="Product Name"/>
+                                </Column>
+
+                                <Column>
+                                    <Text text="Price"/>
+                                </Column>
+
+                                <Column>
+                                    <Text text="Supplier"/>
+                                </Column>
+
+                            </columns>
+
+                            <items>
+
+                                <ColumnListItem>
+
+                                    <cells>
+
+                                        <Text text="{ProductID}"/>
+                                        <Text text="{ProductName}"/>
+                                        <Text text="{UnitPrice}"/>
+                                        <Text text="{Supplier/CompanyName}"/>
+
+                                    </cells>
+
+                                </ColumnListItem>
+
+                            </items>
+
+                        </Table>
+
+                    </IconTabFilter>
+
+                    <!-- ORDERS -->
+
+                    <IconTabFilter
+                        key="ORDERS"
+                        text="Orders"
+                        icon="sap-icon://sales-order">
+
+                        <List
+                            growing="true"
+                            items="{/Orders}">
+
+                            <items>
+
+                                <StandardListItem
+                                    title="Order ID: {OrderID}"
+                                    description="Customer ID: {CustomerID}"
+                                    info="{ShipCountry}"/>
+
+                            </items>
+
+                        </List>
+
+                    </IconTabFilter>
+
+                </items>
+
+            </IconTabBar>
+
+        </content>
+
+    </Page>
+
+</mvc:View>
