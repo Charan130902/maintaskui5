@@ -1,5 +1,4 @@
-<mvc:View
-    controllerName="com.maintask.controller.detailedView1"
+<mvc:View controllerName="com.maintask.controller.detailedView1"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:form="sap.ui.layout.form">
@@ -8,24 +7,17 @@
 
         <content>
 
-            <IconTabBar
-                id="idMainTabBar"
-                expandable="false">
+            <IconTabBar id="idMainTabBar" expandable="false">
 
                 <items>
 
                     <!-- CONTRACT -->
 
-                    <IconTabFilter
-                        key="CONTRACT"
-                        text="Contract"
-                        icon="sap-icon://document">
+                    <IconTabFilter key="CONTRACT" text="Contract" icon="sap-icon://document">
 
                         <VBox class="sapUiSmallMargin">
 
-                            <form:SimpleForm
-                                editable="true"
-                                layout="ColumnLayout">
+                            <form:SimpleForm editable="true" layout="ColumnLayout">
 
                                 <form:content>
 
@@ -196,37 +188,19 @@
                             <!-- Bottom Action Buttons -->
                             <Toolbar>
 
-                                <Button
-                                    text="Save"
-                                    type="Reject"
-                                    icon="sap-icon://sys-cancel"
-                                    press="onContractSave"/>
+                                <Button text="Save" type="Reject" icon="sap-icon://sys-cancel" press="onContractSave"/>
 
                                 <ToolbarSpacer/>
 
-                                <Button
-                                    text="Save As Template"
-                                    type="Reject"
-                                    icon="sap-icon://sys-cancel"
-                                    press="onSaveAsTemplate"/>
+                                <Button text="Save As Template" type="Reject" icon="sap-icon://sys-cancel" press="onSaveAsTemplate"/>
 
                                 <ToolbarSpacer/>
 
-                                <Button
-                                    text="Preview"
-                                    type="Reject"
-                                    icon="sap-icon://sys-cancel"
-                                    press="onPreview"/>
+                                <Button text="Preview" type="Reject" icon="sap-icon://sys-cancel" press="onPreview"/>
 
-                                <Button
-                                    text="Submit To Admin"
-                                    press="onSubmitToAdmin"/>
+                                <Button text="Submit To Admin" press="onSubmitToAdmin"/>
 
-                                <Button
-                                    text="Submit To Specialist"
-                                    type="Reject"
-                                    icon="sap-icon://sys-cancel"
-                                    press="onSubmitToSpecialist"/>
+                                <Button text="Submit To Specialist" type="Reject" icon="sap-icon://sys-cancel" press="onSubmitToSpecialist"/>
 
                             </Toolbar>
 
@@ -236,10 +210,7 @@
 
                     <!-- EMPLOYEE -->
 
-                    <IconTabFilter
-                        key="EMP"
-                        text="Employee Details"
-                        icon="sap-icon://employee">
+                    <IconTabFilter key="EMP" text="Employee Details" icon="sap-icon://employee">
 
                         <VBox class="sapUiSmallMargin">
 
@@ -249,35 +220,17 @@
 
                                 <ToolbarSpacer/>
 
-                                <Button
-                                    text="Add"
-                                    type="Emphasized"
-                                    press="onAdd"
-                                    enabled="{= !${empModel>/isAdding} }"/>
+                                <Button text="Add" type="Emphasized" press="onAdd" enabled="{= !${empModel>/isAdding} }"/>
 
-                                <Button
-                                    text="Edit"
-                                    type="Attention"
-                                    press="onEdit"
-                                    enabled="{= !${empModel>/isAdding} }"/>
+                                <Button text="Edit" type="Attention" press="onEdit" enabled="{= !${empModel>/isAdding} }"/>
 
-                                <Button
-                                    text="Delete"
-                                    type="Reject"
-                                    press="onDelete"
-                                    enabled="{= !${empModel>/isAdding} }"/>
+                                <Button text="Delete" type="Reject" press="onDelete" enabled="{= !${empModel>/isAdding} }"/>
 
-                                <Button
-                                    text="Refresh"
-                                    press="onRefresh"/>
+                                <Button text="Refresh" press="onRefresh"/>
 
                             </Toolbar>
 
-                            <Table
-                                id="idEmpTable"
-                                items="{empModel>/employees}"
-                                mode="SingleSelectLeft"
-                                growing="true">
+                            <Table id="idEmpTable" items="{empModel>/employees}" mode="SingleSelectLeft" growing="true">
 
                                 <columns>
 
@@ -306,39 +259,23 @@
                                         <cells>
 
                                             <HBox>
-                                                <Text
-                                                    text="{empModel>EMPID}"
-                                                    visible="{= !${empModel>Editable} }"/>
-                                                <Input
-                                                    value="{empModel>EMPID}"
-                                                    visible="{empModel>Editable}"/>
+                                                <Text text="{empModel>EMPID}" visible="{= !${empModel>Editable} }"/>
+                                                <Input value="{empModel>EMPID}" visible="{empModel>Editable}"/>
                                             </HBox>
 
                                             <HBox>
-                                                <Text
-                                                    text="{empModel>NAME}"
-                                                    visible="{= !${empModel>Editable} }"/>
-                                                <Input
-                                                    value="{empModel>NAME}"
-                                                    visible="{empModel>Editable}"/>
+                                                <Text text="{empModel>NAME}" visible="{= !${empModel>Editable} }"/>
+                                                <Input value="{empModel>NAME}" visible="{empModel>Editable}"/>
                                             </HBox>
 
                                             <HBox>
-                                                <Text
-                                                    text="{empModel>LOCATION}"
-                                                    visible="{= !${empModel>Editable} }"/>
-                                                <Input
-                                                    value="{empModel>LOCATION}"
-                                                    visible="{empModel>Editable}"/>
+                                                <Text text="{empModel>LOCATION}" visible="{= !${empModel>Editable} }"/>
+                                                <Input value="{empModel>LOCATION}" visible="{empModel>Editable}"/>
                                             </HBox>
 
                                             <HBox>
-                                                <Text
-                                                    text="{empModel>DESIGNATION}"
-                                                    visible="{= !${empModel>Editable} }"/>
-                                                <Input
-                                                    value="{empModel>DESIGNATION}"
-                                                    visible="{empModel>Editable}"/>
+                                                <Text text="{empModel>DESIGNATION}" visible="{= !${empModel>Editable} }"/>
+                                                <Input value="{empModel>DESIGNATION}" visible="{empModel>Editable}"/>
                                             </HBox>
 
                                         </cells>
@@ -353,15 +290,9 @@
 
                                 <ToolbarSpacer/>
 
-                                <Button
-                                    text="Clear"
-                                    type="Reject"
-                                    press="onClear"/>
+                                <Button text="Clear" type="Reject" press="onClear"/>
 
-                                <Button
-                                    text="Save"
-                                    type="Accept"
-                                    press="onSave"/>
+                                <Button text="Save" type="Accept" press="onSave"/>
 
                             </Toolbar>
 
@@ -371,14 +302,9 @@
 
                     <!-- PRODUCTS -->
 
-                    <IconTabFilter
-                        key="PRODUCTS"
-                        text="Products"
-                        icon="sap-icon://product">
+                    <IconTabFilter key="PRODUCTS" text="Products" icon="sap-icon://product">
 
-                        <Table
-                            growing="true"
-                            items="{
+                        <Table growing="true" items="{
                                 path:'/Products',
                                 parameters:{
                                     expand:'Supplier'
@@ -428,21 +354,13 @@
 
                     <!-- ORDERS -->
 
-                    <IconTabFilter
-                        key="ORDERS"
-                        text="Orders"
-                        icon="sap-icon://sales-order">
+                    <IconTabFilter key="ORDERS" text="Orders" icon="sap-icon://sales-order">
 
-                        <List
-                            growing="true"
-                            items="{/Orders}">
+                        <List growing="true" items="{/Orders}">
 
                             <items>
 
-                                <StandardListItem
-                                    title="Order ID: {OrderID}"
-                                    description="Customer ID: {CustomerID}"
-                                    info="{ShipCountry}"/>
+                                <StandardListItem title="Order ID: {OrderID}" description="Customer ID: {CustomerID}" info="{ShipCountry}"/>
 
                             </items>
 

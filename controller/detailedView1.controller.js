@@ -167,7 +167,7 @@ sap.ui.define([
 
                 });
 
-            // UPDATE
+                // UPDATE
             } else {
 
                 var oUpdatePayload = {
