@@ -218,7 +218,6 @@ sap.ui.define([
                 .getBindingContext("empModel")
                 .getObject();
 
-            // Use the ZUI5_DEMO_SRV named model for employee operations
             this.getOwnerComponent()
                 .getModel("ZUI5_DEMO_SRV")
                 .remove(
